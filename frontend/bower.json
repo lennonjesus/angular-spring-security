@@ -1,0 +1,25 @@
+{
+  "name": "angular-spring-security",
+  "description": "angular-spring-security",
+  "main": "index.js",
+  "authors": [
+    "Lennon Jesus <lennon.jesus@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "angularjs",
+    "spring-security",
+    "rest",
+    "auth"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "angular-spring-security",
+  "version": "1.0.0",
+  "description": "angular-spring-security",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lennonjesus/angular-spring-security.git"
+  },
+  "keywords": [
+    "angularjs",
+    "spring-security",
+    "rest",
+    "auth"
+  ],
+  "author": "Lennon Jesus <lennon.jesus@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lennonjesus/angular-spring-security/issues"
+  },
+  "homepage": "https://github.com/lennonjesus/angular-spring-security#readme"
+}
