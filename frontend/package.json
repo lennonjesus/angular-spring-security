@@ -18,6 +18,24 @@
   ],
   "author": "Lennon Jesus <lennon.jesus@gmail.com>",
   "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.10.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean": "^0.3.1",
+    "gulp-html-replace": "^1.5.5",
+    "gulp-if": "^2.0.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-minify-css": "^1.2.2",
+    "gulp-minify-html": "^1.0.4",
+    "gulp-uglify": "^1.5.1",
+    "gulp-usemin": "^0.3.16",
+    "gulp-useref": "^3.0.3",
+    "jshint": "^2.8.0",
+    "jshint-stylish": "^2.1.0",
+    "proxy-middleware": "^0.15.0",
+    "wiredep": "^2.2.2"
+  },
   "bugs": {
     "url": "https://github.com/lennonjesus/angular-spring-security/issues"
   },
