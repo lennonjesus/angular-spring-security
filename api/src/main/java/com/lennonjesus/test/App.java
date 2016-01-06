@@ -8,8 +8,10 @@ import org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration;
 import org.springframework.boot.autoconfigure.web.ErrorMvcAutoConfiguration;
 import org.springframework.boot.autoconfigure.websocket.WebSocketAutoConfiguration;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 /**
@@ -27,6 +29,11 @@ public class App extends SpringBootServletInitializer {
 
     public static void main(String[] args) {
         SpringApplication.run(App.class, args);
+    }
+
+    @Bean
+    public WebSecurityConfigurerAdapter webSecurityConfigurerAdapter() {
+        return new ApplicationSecurity();
     }
 
 }

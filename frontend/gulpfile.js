@@ -61,7 +61,7 @@ gulp.task('default', ['copy'], function () {
 });
 
 
-gulp.task('server', function () {
+gulp.task('server', ['usemin'], function () {
 
   var proxyOptions = url.parse('http://localhost:8080/angular-spring-security/api');
   proxyOptions.route = '/angular-spring-security/api';
