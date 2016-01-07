@@ -1,7 +1,22 @@
-<h1>::: Home :::</h1>
+<fieldset>
+  <legend>Mensagem pública</legend>
 
-<span>Public text: {{publicText}}</span>
+  <p>
+    <span>{{publicText}}</span>
+  </p>
+</fieldset>
 
-<br />
+<fieldset>
+  <legend>Mensagem secreta</legend>
 
-<span>Secret text: {{secretText}}</span>
+  <p>
+    <span ng-show="authenticated">
+      Mensagem exclusiva para {{username}}: {{secretText}}
+      <a href="" ng-click="logout()">Logout</a>
+    </span>
+    <span ng-hide="authenticated">
+      Você não tem permissão para ler esta mensagem.
+      <a href="#/login">Login</a>
+    </span>
+  </p>
+</fieldset>

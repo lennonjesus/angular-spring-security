@@ -7,19 +7,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <!-- <link rel="shortcut icon" href="assets/ico/favicon.png"> -->
 
     <title>angular-spring-security</title>
 
     <!-- build:vendorcss css/vendor.min.css-->
+
     <!-- bower:css -->
 
     <!-- endbower -->
+
     <!-- endbuild -->
 
+
     <!-- build:css css/main.min.css-->
-    <link href="layout/css/main.css" rel="stylesheet">
+
+    <!-- inject:css -->
+
+
+
+    <!-- endinject -->
+
     <!-- endbuild -->
+
+
 
   </head>
   <body>
@@ -27,15 +38,29 @@
     <div ng-view></div >
 
     <!-- build:vendorjs js/vendor.min.js -->
+
     <!-- bower:js -->
 
     <!-- endbower -->
+
     <!-- endbuild -->
 
+
     <!-- build:js js/main.min.js -->
+
+    <!-- inject:js -->
+
     <script src="module/app.module.js"></script>
-    <script src="module/app.route.js"></script>
+    <script src="module/app.config.js"></script>
     <script src="module/app.controller.js"></script>
+    <script src="module/login.controller.js"></script>
+
+
+
+
+    <!-- endinject -->
+
     <!-- endbuild -->
+
   </body>
 </html>

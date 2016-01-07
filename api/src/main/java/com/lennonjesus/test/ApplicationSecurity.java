@@ -6,6 +6,7 @@ import org.springframework.core.annotation.Order;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.web.authentication.logout.SimpleUrlLogoutSuccessHandler;
 
 /**
  * Created by lennonjesus on 1/6/16.
@@ -32,6 +33,8 @@ public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
+                .httpBasic()
+                .and()
                 .authorizeRequests()
                 .antMatchers("/api/public/**").permitAll()
                 .antMatchers("/api/secret/**").authenticated()
@@ -41,6 +44,10 @@ public class ApplicationSecurity extends WebSecurityConfigurerAdapter {
                 .and()
                 .formLogin().successHandler(authenticationSuccessHandler)
                 .and()
-                .formLogin().failureHandler(authenticationFailureHandler);
+                .formLogin().failureHandler(authenticationFailureHandler)
+                .and()
+                .logout().logoutUrl("/api/logout")
+                .invalidateHttpSession(true)
+                .logoutSuccessHandler(new SimpleUrlLogoutSuccessHandler());
     }
 }

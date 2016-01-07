@@ -4,6 +4,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.security.Principal;
+
 /**
  * @author Lennon Jesus
  */
@@ -19,6 +21,11 @@ public class HelloRestController {
     public @ResponseBody
     Mensagem secret() {
         return new Mensagem("This is top secret info!");
+    }
+
+    @RequestMapping("/user")
+    public Principal getUser(Principal user) {
+        return user;
     }
 
     class Mensagem {

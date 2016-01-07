@@ -11,7 +11,8 @@ var
   jshint          = require('gulp-jshint'),
   jshintStylish   = require('jshint-stylish'),
   autoprefixer    = require('gulp-autoprefixer'),
-  url             = require('url')
+  url             = require('url'),
+  inject          = require('gulp-inject');
 ;
 
 var basePaths = {
@@ -30,7 +31,7 @@ gulp.task('copy', ['clean'], function () {
     .pipe(gulp.dest(basePaths.tmp));
 });
 
-gulp.task('wiredep', ['copy'], function () {
+gulp.task('wiredep', ['copy', /*'inject'*/], function () {
   return gulp
     .src(basePaths.tmp + 'index.html')
     .pipe(
@@ -40,6 +41,18 @@ gulp.task('wiredep', ['copy'], function () {
       })
     ).pipe(gulp.dest(basePaths.tmp));
 });
+
+// gulp.task('inject', ['copy'], function () {
+//
+//   return
+//     gulp
+//       .src('app/**/index.html')
+//       .pipe(inject(
+//         gulp.src(['app/**/*.js']))
+//       )
+//       .pipe(gulp.dest('app'));
+//
+// });
 
 gulp.task('usemin', ['wiredep'], function() {
   return gulp.src(basePaths.tmp + 'index.html')
@@ -56,13 +69,15 @@ gulp.task('usemin', ['wiredep'], function() {
 });
 
 gulp.task('jshint', function () {
-  gulp
+  return gulp
     .src(basePaths.src + '**/*.js')
     .pipe(jshint())
     .pipe(jshint.reporter(jshintStylish));
 });
 
-gulp.task('change-src', ['usemin'], browserSync.reload);
+gulp.task('change-src', ['usemin'], function () {
+  browserSync.reload();
+});
 
 gulp.task('default', [], function () {
   gulp.start('jshint', 'usemin');
@@ -82,6 +97,7 @@ gulp.task('server', ['usemin'], function () {
     }
   });
 
-  gulp.watch(basePaths.src + '**', ['change-src']);
+  gulp.watch(basePaths.src + '**/*', ['change-src']);
+
 
 });
