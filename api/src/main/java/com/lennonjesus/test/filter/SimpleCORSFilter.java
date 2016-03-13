@@ -1,4 +1,4 @@
-package com.lennonjesus.test;
+package com.lennonjesus.test.filter;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

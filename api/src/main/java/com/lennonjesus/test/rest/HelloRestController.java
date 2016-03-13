@@ -1,4 +1,4 @@
-package com.lennonjesus.test;
+package com.lennonjesus.test.rest;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;

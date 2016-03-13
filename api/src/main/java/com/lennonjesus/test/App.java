@@ -1,5 +1,6 @@
 package com.lennonjesus.test;
 
+import com.lennonjesus.test.security.ApplicationSecurity;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;

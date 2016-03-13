@@ -1,4 +1,4 @@
-package com.lennonjesus.test;
+package com.lennonjesus.test.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.security.SecurityProperties;

@@ -1,4 +1,4 @@
-package com.lennonjesus.test;
+package com.lennonjesus.test.security;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler;
