@@ -39,3 +39,16 @@ http://localhost:9000
 |-----|:------:|---:|
 |user|user|user|
 |admin|admin|admin|
+
+#### TODO
+
+* [ ] Tests
+* [ ] Persist auth token
+
+#### Contributions
+
+Issues and pull requests are welcome!
+
+#### LICENSE
+
+[MIT](LICENSE.md)
